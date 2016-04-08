@@ -1,0 +1,2 @@
+all:add.c sub.c mul.c dive.c test.c
+	gcc add.c sub.c mul.c dive.c test.c -I./include

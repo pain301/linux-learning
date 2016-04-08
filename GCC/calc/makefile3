@@ -1,0 +1,24 @@
+all:add.o sub.o mul.o dive.o test.o
+	gcc add.o sub.o mul.o dive.o test.o -o test
+
+add.o:add.c
+	gcc -c add.c
+
+sub.o:sub.c
+	gcc -c sub.c
+
+mul.o:mul.c
+	gcc -c mul.c
+
+dive.o:dive.c
+	gcc -c dive.c
+
+test.o:test.c
+	gcc -c test.c -I./include
+
+#伪目标
+.PHONY:clean
+clean:
+	-rm -f *.o
+	-rm -f test
+	
