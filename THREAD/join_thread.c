@@ -4,6 +4,8 @@
 
 void *thread1(void *arg){
 	printf("thread1 running\n");
+
+	//通过join获取放回子线程返回数据
 	return (void *)1;
 }
 
